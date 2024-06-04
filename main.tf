@@ -6,10 +6,8 @@ module "s3_bucket" {
   bucket = lookup(each.value, "bucket")
   tags   = lookup(each.value, "tags")
   logging = {
-    logging_bucket = lookup(each.value, "logging_bucket", "")
-    target_bucket  = lookup(each.value, "target_bucket", "")
-    target_prefix  = lookup(each.value, "target_prefix", "")
+    logging_bucket = lookup(each.value.logging, "logging_bucket", "")
+    target_bucket  = lookup(each.value.logging, "target_bucket", "")
+    target_prefix  = lookup(each.value.logging, "target_prefix", "")
   }
-
-
 }
