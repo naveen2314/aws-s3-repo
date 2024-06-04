@@ -3,9 +3,8 @@ module "s3_bucket" {
 
   for_each = var.s3_buckets
 
-  bucket     = lookup(each.value, "bucket")
-  tags       = lookup(each.value, "tags")
-  versioning = lookup(each.value, "versioning")
+  bucket = lookup(each.value, "bucket")
+  tags   = lookup(each.value, "tags")
   logging = {
     logging_bucket = lookup(each.value, "logging_bucket", "")
     target_bucket  = lookup(each.value, "target_bucket", "")

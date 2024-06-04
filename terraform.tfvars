@@ -1,9 +1,6 @@
 s3_buckets = {
   first-iac-bucket = {
     bucket = "637423167506-test-bucket"
-    versioning = {
-      enabbled = true
-    }
     tags = {
       env = "test"
     }
