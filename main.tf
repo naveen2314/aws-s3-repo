@@ -1,5 +1,5 @@
 module "s3_bucket" {
-  source = "git::https://github.com/naveen2314/aws-s3-module.git?ref=7cd6ce4"
+  source = "git::https://github.com/naveen2314/aws-s3-module.git?ref=bee34cf"
 
   for_each = var.s3_buckets
 
